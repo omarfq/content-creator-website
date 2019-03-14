@@ -1,2 +1,58 @@
-h1 {
-  color: blue; }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #fff; }
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh repeat(4, min-content) 100vh repeat(2, min-content);
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
+
+.about-me {
+  background-color: #222C35;
+  grid-column: full-start / full-end; }
+
+.commitment {
+  background-color: #D72322;
+  grid-column: full-start / full-end; }
+
+.form {
+  background-color: #53a1ad;
+  grid-column: full-start / full-end; }
+
+.my-work {
+  background-color: #53a1ad;
+  grid-column: full-start / full-end; }
+
+.packages {
+  background-color: #8f9396;
+  grid-column: center-start / center-end; }
+
+.services {
+  background-color: #D72322;
+  grid-column: center-start / center-end; }
+
+.testimonials {
+  background-color: #F7F7F7;
+  color: #000;
+  grid-column: center-start / center-end; }
+
+.footer {
+  background-color: #8f9396;
+  grid-column: full-start / full-end; }
+
+.header {
+  background-color: #222C35;
+  grid-column: full-start / full-end; }
