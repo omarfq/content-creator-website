@@ -1,0 +1,62 @@
+.navigation {
+    grid-row: 1 / 1;
+    grid-column: full-start / full-end;
+    z-index: 1;
+    padding: 8rem 6rem;
+    justify-self: center;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+
+    font-family: $font-display;
+    
+
+    &__nav--left {
+        justify-self: center;
+        align-self: center;
+        
+    }
+
+    &__nav--center {
+        justify-self: center;
+        align-self: center;
+    }
+
+    &__nav--right {
+        justify-self: center;
+        align-self: center;
+        
+        
+    }
+
+    &__header {
+        font-weight: 200;
+        
+    }
+
+    &__list {
+        list-style: none;
+        text-decoration: none;
+    }
+
+    &__item {
+        display: inline;
+        margin: 1rem;
+        
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: #fff;
+            display: inline-block;
+            &:not(.heading-1) {
+                font-size: 1.5rem;
+            }
+            font-weight: 200;
+            letter-spacing: .4rem;
+        }
+    }
+}

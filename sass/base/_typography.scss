@@ -1,0 +1,13 @@
+%heading {
+    font-family: $font-display;
+    font-weight: 300;
+}
+
+.heading-1 {
+    @extend %heading;
+
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 1;
+}
+

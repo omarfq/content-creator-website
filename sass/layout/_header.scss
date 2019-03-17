@@ -1,4 +1,39 @@
 .header {
-    background-color: $color-primary;
     grid-column: full-start / full-end;
+    grid-row: 1 / span 2;
+
+    background-image: linear-gradient(rgba($color-primary, .65), rgba($color-primary, .65)), url(../img/photo-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 8rem;
+    padding-bottom: 4rem;
+    
+
+    display: grid;
+    grid-template-rows: 60vh 1fr;
+    grid-template-columns: 1fr minmax(45rem, min-content) 1fr;
+    
+
+    &__text {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        justify-self: center;
+        
+    }
+}
+
+.social {
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(3, minmax(min-content, 5rem));
+    justify-content: end; 
+    align-content: center;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+
+    &__icon {
+        height: 2rem;
+        fill: #fff;
+    }
 }
