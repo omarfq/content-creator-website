@@ -2,7 +2,7 @@
     grid-column: full-start / full-end;
     grid-row: 1 / span 2;
 
-    background-image: linear-gradient(rgba($color-primary, .65), rgba($color-primary, .65)), url(../img/photo-header.jpg);
+    background-image: linear-gradient(to top, transparent, rgba($color-primary, .9)), url(../img/photo-header.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -25,9 +25,8 @@
 
 .social {
     display: grid;
-    grid-template-rows: repeat(2, min-content);
-    grid-template-columns: repeat(3, minmax(min-content, 5rem));
-    justify-content: end; 
+    grid-template-columns: repeat(3, 5rem);
+    justify-content: center; 
     align-content: center;
     grid-column: 3 / 4;
     grid-row: 2 / 3;

@@ -27,8 +27,9 @@
     }
 
     &__nav--center {
-        justify-content: center;
+        justify-self: center;
         align-self: center;
+        
     }
 
     &__nav--right {
@@ -54,14 +55,16 @@
     }
 
     &__list {
+        justify-self: center;
         list-style: none;
         text-decoration: none;
     }
 
     &__item {
         display: inline;
-        margin: 1rem;
-        
+        &:not(.navigation__center) {
+            margin: 1rem;
+        }
     }
 
     &__link {
@@ -71,11 +74,13 @@
             color: #fff;
             display: inline-block;
             &:not(.heading-1) {
-                font-size: 1.5rem;
+                font-size: 1.2rem;
+                font-weight: 200;
+                text-transform: uppercase;
             }
-            font-weight: 200;
+        
             letter-spacing: .4rem;
-            text-transform: uppercase;
+            
         }
     }
 }

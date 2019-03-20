@@ -16,10 +16,12 @@ body {
     font-weight: 300;
     line-height: 1.6;
     color: #fff;
+    
 }
 
 .container {
     display: grid;
-    grid-template-rows: min-content 78vh repeat(4, min-content) 100vh repeat(2, min-content);
+    grid-template-rows: min-content calc(100vh - 25rem) repeat(4, min-content) 100vh repeat(2, min-content);
     grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end];
+    background-color: $color-grey-light-1;
 }
