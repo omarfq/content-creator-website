@@ -1,8 +1,9 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
   box-sizing: inherit; }
 
 html {
@@ -52,7 +53,79 @@ body {
 
 .my-work {
   background-color: #53a1ad;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  margin: 5rem 0;
+  position: relative; }
+
+.video__overlay {
+  width: 60vw;
+  height: 60vh;
+  /* 50% opacity black */
+  background: rgba(0, 0, 0, 0.5);
+  /* Stays locked on scroll */
+  position: fixed;
+  /* On top of the rest*/
+  z-index: 2;
+  /* Hidden */
+  opacity: 0;
+  /* No interference */
+  left: -100%;
+  /* CSS3 Transition */
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s; }
+
+.video__video-container {
+  width: 50%;
+  /* Centering */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%); }
+
+.video__close {
+  font-size: 20rem;
+  color: red;
+  position: relative;
+  right: 0;
+  /* Bring above video */
+  top: -30px;
+  z-index: 30; }
+  .video__close:hover {
+    /* 50% opacity white */
+    fill: rgba(255, 255, 255, 0.5);
+    cursor: pointer; }
+
+.show {
+  opacity: 1; }
+
+.play {
+  width: 70px;
+  height: 70px;
+  background: #222;
+  display: block;
+  margin: 0 auto;
+  /* Important for :after */
+  position: relative;
+  /* Makes a circle */
+  border-radius: 50%; }
+  .play:hover {
+    background: #333;
+    cursor: pointer; }
+  .play:after {
+    position: absolute;
+    content: "";
+    /* Centering */
+    top: 50%;
+    margin-top: -15px;
+    left: 50%;
+    margin-left: -8px;
+    /* CSS Triangle */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 0 15px 20px;
+    border-color: transparent transparent transparent #ffffff; }
 
 .packages {
   background-color: #8f9396;
@@ -142,6 +215,7 @@ body {
   z-index: 1;
   padding: 8rem 0rem;
   justify-self: center;
+  overflow: hidden;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 45rem minmax(50rem, min-content) 45rem;
@@ -196,6 +270,7 @@ body {
   z-index: 1;
   padding: 8rem 0rem;
   justify-self: center;
+  overflow: hidden;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 45rem minmax(50rem, min-content) 45rem;

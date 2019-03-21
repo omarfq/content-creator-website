@@ -55,21 +55,6 @@
 
     <header class="header">
 
-
-        <!-- <div class="header__menu--left">
-            <ul class="header__menu-list">
-                <li class="header__menu-item">
-                    <a href="#">What I do</a>
-                </li>
-                <li class="header__menu-item">
-                    <a href="#">My work</a>
-                </li>
-                <li class="header__menu-item">
-                    <a href="#">Packages</a>
-                </li>
-            </ul>
-        </div> -->
-
         <div class="social">
             <svg class="social__icon">
                 <a href="http://www.google.com">
@@ -129,7 +114,25 @@
     </section>
 
     <section class="my-work">
-        
+
+        <div class="video">
+            <div class="video__overlay">
+                <div class="video__video-container">
+                    <i class="video__close fas fa-times"></i>
+
+
+                </div>
+            </div>
+            <div class="click-img">
+                <!-- Embedded video -->
+                <iframe id="video" src="https://player.vimeo.com/video/217972227" width="640" height="320"
+                    frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay">
+                </iframe>
+                <span class="play"></span>
+
+            </div>
+        </div>
+
     </section>
 
     <section class="packages">
@@ -152,13 +155,12 @@
         FORM
     </section>
 
-
     <footer class="footer">
         FOOTER
     </footer>
 
-
-
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
