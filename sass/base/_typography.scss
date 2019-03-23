@@ -1,5 +1,5 @@
 %heading {
-    font-family: $font-primary;
+    font-family: $font-display;
     font-weight: 300;
 }
 
@@ -19,6 +19,17 @@
     @extend %heading;
     font-size: 2rem;
     text-transform: uppercase;
+
+    &--dark {
+        color: $color-primary;
+    }
+}
+
+.heading-5 {
+    @extend %heading;
+
+    font-size: 1.6rem;
+    line-height: 1;
 
     &--dark {
         color: $color-primary;
