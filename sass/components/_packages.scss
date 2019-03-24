@@ -1,4 +1,180 @@
 .packages {
-    background-color: $color-grey-1;
-    grid-column: center-start / center-end;
+    grid-column: full-start / full-end;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 3rem;
+    
+    margin: 15rem 2rem;
+    justify-content: center;
 }
+
+.card {
+    // FUNCTIONALITY
+    position: relative;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    height: 65rem;
+    padding: 3rem;
+    width: 100%;
+
+    &__side {
+        
+        position: absolute;
+        transition: all .8s ease;
+        height: 52rem;
+        width: 85%;
+        top: 6%;
+        left: 8%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba(#000, .15);
+        
+
+        &--front {
+            background-color: #fff;
+        }
+
+        &--back {
+            background-color: green;
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, $color-secondary, $color-primary);
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, $color-red-light, $color-red);
+
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom, $color-grey-1, $color-grey-2);
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+    // FRONT-SIDE STYLING
+
+    &__picture {
+        height: 23rem;
+        background-size: cover;
+        width: 100%;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        filter: brightness(70%);
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-secondary, $color-primary), url(../img/card-pic-1.jpg);
+        }
+
+        &--2 {
+            
+            background-image: linear-gradient(to right bottom, $color-red-light, $color-red), url(../img/card-pic-2.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, $color-grey-1, $color-grey-2), url(../img/card-pic-3.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.5rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        text-align: right;
+        color: #fff;
+        position: absolute;
+        top: 16.5rem;
+        right: 2rem;
+        width: 75%;
+        height: 5rem;
+        font-family: $font-display;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, 
+            rgba( $color-secondary, .85), 
+            rgba( $color-primary, .85));
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, 
+            rgba( $color-red-light, .85), 
+            rgba( $color-red, .85));
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, 
+            rgba( $color-grey-1, .85), 
+            rgba( $color-grey-2, .85));
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+        color: $color-grey-2-dark;
+        font-weight: 300;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+            }
+        }
+    }
+
+    // BACK-SIDE STYLING
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 8rem;
+    }
+     
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }   
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
+    }
+}
+
+
