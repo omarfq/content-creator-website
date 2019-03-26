@@ -3,14 +3,37 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: min-content 2fr;
     grid-gap: 3rem;
     
-    margin: 15rem 2rem;
+    padding: 5rem 2rem;
     justify-content: center;
+
+    &__header {
+        justify-self: center;
+        grid-column: 2 / 3 ;
+        grid-row: 1 / 2;
+        font-family: $font-display;
+        color:  transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        font-size: 4rem;
+        background-image: linear-gradient(to top right, $color-primary, $color-secondary);
+        &::after {
+            content: "";
+            height: 3px;
+            width: 25%;
+            display: block;
+            margin-top: 3.5rem;
+            margin-left: 11.5rem;
+            background-image: linear-gradient(to top right, $color-primary, $color-secondary);
+        }
+    }
 }
 
 .card {
     // FUNCTIONALITY
+    grid-row: 2 / 3;
     position: relative;
     perspective: 150rem;
     -moz-perspective: 150rem;
