@@ -11,6 +11,7 @@
     grid-template-columns: 45rem minmax(50rem, min-content) 45rem;
 
     font-family: $font-display;
+   
     
 
     &__nav--left {
@@ -22,7 +23,7 @@
             content: "";
             height: 1px;
             display: block;
-            margin-bottom: 2rem;
+            //margin-bottom: 2rem;
             background-color: currentColor;
         }
     }
@@ -34,6 +35,7 @@
     }
 
     &__nav--right {
+        
         justify-self: center;
         align-self: center;
         margin-top: 5rem;
@@ -43,7 +45,7 @@
             content: "";
             height: 1px;
             display: block;
-            margin-bottom: 2rem;
+            //margin-bottom: 2rem;
             background-color: currentColor;
         }
         
@@ -51,24 +53,50 @@
     }
 
     &__header {
-        font-weight: 200;
-        
+        letter-spacing: 3px;
     }
 
     &__list {
         justify-self: center;
         list-style: none;
         text-decoration: none;
+        text-align: center;
+        padding: 1rem 0;
     }
 
     &__item {
+        position: relative;
         display: inline;
         &:not(.navigation__center) {
             margin: 1rem;
         }
+
     }
 
+    &__item:before {
+        content: "";
+        position: absolute;
+        top: -160%;
+        left: -8%;
+        height: 3px;
+        width: 110%;
+        background-color: #fff;
+        transform: scaleX(0);
+        transition: transform .2s, height .4s cubic-bezier(1,0,0,1) .2s, background-color .1s;
+    }
+
+    &__item:hover::before {
+        transform: scaleX(1);
+        height: 280%;
+        color: $color-primary;
+    }
+
+    
+
     &__link {
+        position: relative;
+        transition: all .5s;
+
         &:link,
         &:visited {
             text-decoration: none;
@@ -82,6 +110,11 @@
         
             letter-spacing: .4rem;
             
+        }
+
+        &:hover {
+            color: $color-primary;
+            z-index: 10;
         }
     }
 }

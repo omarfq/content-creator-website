@@ -19,8 +19,30 @@
 
     } 
 
+    &__link {
+        &:link,
+        &:visited {
+            font-size: 1.4rem;
+            color: #fff;
+            text-decoration: none;
+            font-family: $font-display;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 1.5rem;
+            display: block;
+            transition: all .2s;
+        }
+    
+        &:hover,
+        &:active {
+            background-color: rgba(#fff, .05);
+            transform: translateY(-3px);
+        }
+    }
+
     &__copyright {
         margin-top: 3rem;
         text-align: center;
+        font-size: 1.3rem;
     }
 }

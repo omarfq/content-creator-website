@@ -1,9 +1,6 @@
 .section-form {
     grid-column: full-start / full-end;
-
     margin-top: $margin-top;
-    
-    
 }
 
 .book {
@@ -12,8 +9,6 @@
     margin: 15rem;
     padding: 5rem;
     background-color: $color-red;
-    
-    
 
     &__form {  
         width: 100%;
@@ -77,5 +72,6 @@
 
     &__btn {
         left: 5%;
+        margin: 3rem 0;
     }
 }
