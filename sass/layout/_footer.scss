@@ -1,4 +1,26 @@
 .footer {
-    background-color: $color-grey-1;
+    background-color: $color-primary;
     grid-column: full-start / full-end;
+    padding: 8rem;
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    &__nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    &__nav-item {
+
+    } 
+
+    &__copyright {
+        margin-top: 3rem;
+        text-align: center;
+    }
 }

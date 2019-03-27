@@ -1,4 +1,31 @@
 .about-me {
-    background-color: $color-primary;
+    //background-color: $color-primary;
     grid-column: full-start / full-end;
+
+    margin-top: $margin-top;
+    background-image: linear-gradient(105deg, rgba($color-primary, 1) 10%, rgba($color-primary, .9) 40%, transparent 90%), url(../img/about-pic-1.jpg); 
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.info {
+    width: 50%;
+    padding: 6rem;
+    padding-left: 6rem;
+
+    &__header {
+        margin: 6rem;
+        margin-left: 0;
+        overflow: hidden;
+        letter-spacing: .3rem;
+    }
+
+    &__paragraph {
+        font-size: 1.7rem;
+        padding-right: 10rem;
+        line-height: 1.9;
+    }
 }

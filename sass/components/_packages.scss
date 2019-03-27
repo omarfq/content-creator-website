@@ -6,7 +6,10 @@
     grid-template-rows: min-content 2fr;
     grid-gap: 3rem;
     
-    padding: 5rem 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-top: $margin-top;
+    
     justify-content: center;
 
     &__header {

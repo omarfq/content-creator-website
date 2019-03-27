@@ -2,7 +2,10 @@
     background-color: $color-grey-light-1;
     color: #000;
     grid-column: full-start / full-end;
-    padding: 3rem 8rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-bottom: 5rem;
+    margin-top: $margin-top;
 
     display: grid;
     grid-template-columns: repeat(2, minmax(25rem, 1fr));

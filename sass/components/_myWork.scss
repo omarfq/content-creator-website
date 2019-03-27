@@ -7,14 +7,14 @@
     grid-template-rows: (8, 5vw);
     grid-gap: 1.5rem;
     padding: 1.5rem;
-    margin-top: 15rem;
+    margin-top: $margin-top;
     position: relative;
 
     &__header {
         grid-row: 1 / 2;
         grid-column: 1 / 9;
         justify-self: center;
-        padding: 7rem;
+        padding: 6rem;
 
         &::after {
             content: "";
@@ -26,6 +26,8 @@
             background-image: linear-gradient(to top right,  $color-secondary, #fff);
         }
     }
+
+   
 
     &__item {
         position: relative;
@@ -123,15 +125,16 @@
         }
 
         &:hover + .my-work__play-btn {
-             
             opacity: 1;
-            transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%) rotate(0.001deg) ;
+            transform: translate(-50%, -50%) rotate(0.001deg);
+            
         }
 
         &:hover ~ .my-work__heading {
-             
+            
             opacity: 1;
-            transform: translate(-50%, -50%);
+            transform: rotate(0.001deg) translate(-50%, -50%);
         }
     }
 
