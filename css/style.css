@@ -53,7 +53,7 @@ body {
 
 .about-me {
   grid-column: full-start / full-end;
-  margin-top: 8rem;
+  padding-top: 8rem;
   background-image: linear-gradient(105deg, #222c35 10%, rgba(34, 44, 53, 0.9) 40%, transparent 90%), url(../img/about-pic-1.jpg);
   background-size: cover;
   object-fit: cover;
@@ -140,28 +140,30 @@ body {
   grid-column: full-start / full-end; }
 
 .section-form {
-  grid-column: full-start / full-end;
-  margin-top: 8rem; }
+  grid-column: center-start / center-end;
+  height: 105vh;
+  padding: 5rem;
+  padding-top: 10rem;
+  overflow-y: hidden; }
 
 .book {
   border-radius: 5px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.5);
-  margin: 15rem;
-  padding: 5rem;
+  padding: 2rem 0;
   background-color: #D72322; }
   .book__form {
     width: 100%;
-    padding: 6rem;
+    padding: 2rem;
     padding-top: 0;
     padding-bottom: 0; }
 
 .form__header {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   text-align: center;
-  padding: 2rem; }
+  padding: 1rem; }
 
 .form__group:not(:last-child) {
-  margin-bottom: 2rem; }
+  margin-bottom: 1.5rem; }
 
 .form__input {
   margin: 0 auto;
@@ -209,6 +211,7 @@ body {
   grid-template-rows: 8, 5vw;
   grid-gap: 1.5rem;
   padding: 1.5rem;
+  padding-top: 8rem;
   margin-top: 8rem;
   position: relative; }
   .my-work__header {
@@ -335,13 +338,15 @@ body {
 .packages {
   grid-column: full-start / full-end;
   display: grid;
+  height: 105vh;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-template-rows: min-content 2fr;
   grid-gap: 3rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  margin-top: 8rem;
-  justify-content: center; }
+  padding-top: 13rem;
+  justify-content: center;
+  overflow-y: hidden; }
   .packages__header {
     justify-self: center;
     grid-column: 2 / 3;
@@ -472,7 +477,7 @@ body {
   grid-gap: 6rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-top: 8rem; }
+  padding-top: 11rem; }
   .services__header {
     justify-self: center;
     grid-column: 1 / -1;
@@ -518,7 +523,8 @@ body {
   padding-left: 8rem;
   padding-right: 8rem;
   padding-bottom: 5rem;
-  margin-top: 8rem;
+  padding-top: 11rem;
+  height: 100vh;
   display: grid;
   grid-template-columns: repeat(2, minmax(25rem, 1fr));
   grid-template-rows: repeat(3, min-content);
@@ -527,7 +533,12 @@ body {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     justify-self: center;
-    padding: 2rem; }
+    padding: 2rem;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 4rem;
+    background-image: linear-gradient(to top right, #222C35, #53a1ad); }
     .testimonials__header::after {
       content: "";
       height: 3px;
@@ -589,7 +600,7 @@ body {
 .footer {
   background-color: #222C35;
   grid-column: full-start / full-end;
-  padding: 8rem; }
+  padding: 3rem; }
   .footer__menu {
     display: flex;
     flex-direction: column; }
@@ -610,8 +621,21 @@ body {
   .footer__link:hover, .footer__link:active {
     background-color: rgba(255, 255, 255, 0.05);
     transform: translateY(-3px); }
+  .footer__social {
+    display: flex;
+    justify-content: space-between;
+    width: 13%;
+    margin: 0 auto; }
+    .footer__social--link {
+      color: #fff;
+      margin: 1rem;
+      margin-top: 2rem; }
+  .footer__icon {
+    font-size: 2rem; }
+    .footer__icon:hover {
+      color: #53a1ad; }
   .footer__copyright {
-    margin-top: 3rem;
+    margin-top: 2rem;
     text-align: center;
     font-size: 1.3rem; }
 
@@ -624,7 +648,7 @@ body {
   background-position: center;
   padding: 8rem;
   display: grid;
-  grid-template-rows: 60vh 1fr;
+  grid-template-rows: 75vh 1fr;
   grid-template-columns: 1fr minmax(45rem, min-content) 1fr; }
   .header__text {
     grid-column: 2 / 3;
@@ -639,9 +663,6 @@ body {
   align-content: center;
   grid-column: 3 / 4;
   grid-row: 2 / 3; }
-  .social__icon {
-    height: 2rem;
-    fill: #fff; }
 
 .navigation {
   grid-row: 1 / 1;
@@ -649,11 +670,12 @@ body {
   z-index: 1;
   padding: 8rem 0rem;
   justify-self: center;
-  overflow: hidden;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 45rem minmax(50rem, min-content) 45rem;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  position: fixed;
+  transition: all .3s; }
   .navigation__nav--left {
     justify-self: center;
     align-self: center;
@@ -677,7 +699,11 @@ body {
       display: block;
       background-color: currentColor; }
   .navigation__header {
+    overflow-y: hidden;
     letter-spacing: 3px; }
+    .navigation__header:hover {
+      transform: translateY(-0.3rem);
+      color: #ffa600 !important; }
   .navigation__list {
     justify-self: center;
     list-style: none;
@@ -689,20 +715,21 @@ body {
     display: inline; }
     .navigation__item:not(.navigation__center) {
       margin: 1rem; }
-  .navigation__item:before {
+  .navigation__item:not(.navigation__center):before {
     content: "";
     position: absolute;
-    top: -160%;
+    top: -185%;
     left: -8%;
     height: 3px;
     width: 110%;
     background-color: #fff;
     transform: scaleX(0);
     transition: transform 0.2s, height 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
-  .navigation__item:hover::before {
+  .navigation__item:not(.navigation__center):hover::before {
     transform: scaleX(1);
-    height: 280%;
-    color: #222C35; }
+    height: 365%;
+    color: #222C35;
+    overflow-y: hidden; }
   .navigation__link {
     position: relative;
     transition: all .5s; }
@@ -712,12 +739,20 @@ body {
       display: inline-block;
       letter-spacing: .4rem; }
       .navigation__link:link:not(.heading-1), .navigation__link:visited:not(.heading-1) {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 200;
         text-transform: uppercase; }
-    .navigation__link:hover {
-      color: #222C35;
-      z-index: 10; }
+  .navigation__link:not(.heading-1):hover {
+    color: #222C35;
+    z-index: 10; }
+
+.sticky {
+  transition: all .3s;
+  position: fixed;
+  padding: 0;
+  top: 0;
+  width: 100%;
+  background-color: #53a1ad; }
 
 .navigation {
   grid-row: 1 / 1;
@@ -725,11 +760,12 @@ body {
   z-index: 1;
   padding: 8rem 0rem;
   justify-self: center;
-  overflow: hidden;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 45rem minmax(50rem, min-content) 45rem;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  position: fixed;
+  transition: all .3s; }
   .navigation__nav--left {
     justify-self: center;
     align-self: center;
@@ -753,7 +789,11 @@ body {
       display: block;
       background-color: currentColor; }
   .navigation__header {
+    overflow-y: hidden;
     letter-spacing: 3px; }
+    .navigation__header:hover {
+      transform: translateY(-0.3rem);
+      color: #ffa600 !important; }
   .navigation__list {
     justify-self: center;
     list-style: none;
@@ -765,20 +805,21 @@ body {
     display: inline; }
     .navigation__item:not(.navigation__center) {
       margin: 1rem; }
-  .navigation__item:before {
+  .navigation__item:not(.navigation__center):before {
     content: "";
     position: absolute;
-    top: -160%;
+    top: -185%;
     left: -8%;
     height: 3px;
     width: 110%;
     background-color: #fff;
     transform: scaleX(0);
     transition: transform 0.2s, height 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
-  .navigation__item:hover::before {
+  .navigation__item:not(.navigation__center):hover::before {
     transform: scaleX(1);
-    height: 280%;
-    color: #222C35; }
+    height: 365%;
+    color: #222C35;
+    overflow-y: hidden; }
   .navigation__link {
     position: relative;
     transition: all .5s; }
@@ -788,9 +829,17 @@ body {
       display: inline-block;
       letter-spacing: .4rem; }
       .navigation__link:link:not(.heading-1), .navigation__link:visited:not(.heading-1) {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight: 200;
         text-transform: uppercase; }
-    .navigation__link:hover {
-      color: #222C35;
-      z-index: 10; }
+  .navigation__link:not(.heading-1):hover {
+    color: #222C35;
+    z-index: 10; }
+
+.sticky {
+  transition: all .3s;
+  position: fixed;
+  padding: 0;
+  top: 0;
+  width: 100%;
+  background-color: #53a1ad; }

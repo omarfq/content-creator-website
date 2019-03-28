@@ -5,7 +5,8 @@
     padding-left: 8rem;
     padding-right: 8rem;
     padding-bottom: 5rem;
-    margin-top: $margin-top;
+    padding-top: 11rem;
+    height: 100vh;
 
     display: grid;
     grid-template-columns: repeat(2, minmax(25rem, 1fr));
@@ -17,6 +18,11 @@
         grid-row: 1 / 2;
         justify-self: center;
         padding: 2rem;
+        color:  transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        font-size: 4rem;
+        background-image: linear-gradient(to top right, $color-primary, $color-secondary);
         &::after {
             content: "";
             height: 3px;

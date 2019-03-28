@@ -2,15 +2,17 @@
     grid-column: full-start / full-end;
 
     display: grid;
+    height: 105vh;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-template-rows: min-content 2fr;
     grid-gap: 3rem;
     
     padding-left: 2rem;
     padding-right: 2rem;
-    margin-top: $margin-top;
+    padding-top: 13rem;
     
     justify-content: center;
+    overflow-y: hidden;
 
     &__header {
         justify-self: center;

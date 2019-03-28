@@ -10,7 +10,7 @@
     
 
     display: grid;
-    grid-template-rows: 60vh 1fr;
+    grid-template-rows: 75vh 1fr;
     grid-template-columns: 1fr minmax(45rem, min-content) 1fr;
     
 
@@ -31,9 +31,4 @@
     align-content: center;
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-
-    &__icon {
-        height: 2rem;
-        fill: #fff;
-    }
 }

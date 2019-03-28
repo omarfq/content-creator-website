@@ -1,7 +1,7 @@
 .footer {
     background-color: $color-primary;
     grid-column: full-start / full-end;
-    padding: 8rem;
+    padding: 3rem;
 
     &__menu {
         display: flex;
@@ -22,6 +22,7 @@
     &__link {
         &:link,
         &:visited {
+        
             font-size: 1.4rem;
             color: #fff;
             text-decoration: none;
@@ -40,8 +41,28 @@
         }
     }
 
+    &__social {
+        display: flex;
+        justify-content: space-between;
+        width: 13%;
+        margin: 0 auto;
+
+        &--link {
+            color: #fff;
+            margin: 1rem;
+            margin-top: 2rem;
+        }
+    }
+
+    &__icon {
+        font-size: 2rem;
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+
     &__copyright {
-        margin-top: 3rem;
+        margin-top: 2rem;
         text-align: center;
         font-size: 1.3rem;
     }

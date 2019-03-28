@@ -39,5 +39,32 @@ for(let i = 0; i < workHeading.length; i++) {
     });
 }
 
+// jQuery Smooth scroll
+$('.navigation__link, .card__btn').on('click', function(e) {
+    if(this.hash != '') {
+        e.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800);
+    } 
+});
+
+// STICKY HEADER
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myNavigation");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
 
 
